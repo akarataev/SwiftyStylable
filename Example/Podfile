@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'SwiftyStylable_Example' do
+  pod 'SwiftyStylable', :path => '../'
+
+  target 'SwiftyStylable_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

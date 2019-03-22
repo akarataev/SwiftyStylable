@@ -7,18 +7,24 @@
 //
 
 import UIKit
+import SwiftyStylable
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        view.apply(.viewStyle(color: .green))
     }
+}
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+
+// MARK: - implement styles for UIView
+
+extension SwiftyStyle where Control == UIView {
+    
+    static func viewStyle(color: UIColor) -> SwiftyStyle {
+        return .style { view in view.backgroundColor = color }
     }
-
 }
 

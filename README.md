@@ -1,6 +1,5 @@
 # SwiftyStylable
 
-[![CI Status](https://img.shields.io/travis/akarataev/SwiftyStylable.svg?style=flat)](https://travis-ci.org/akarataev/SwiftyStylable)
 [![Version](https://img.shields.io/cocoapods/v/SwiftyStylable.svg?style=flat)](https://cocoapods.org/pods/SwiftyStylable)
 [![License](https://img.shields.io/cocoapods/l/SwiftyStylable.svg?style=flat)](https://cocoapods.org/pods/SwiftyStylable)
 [![Platform](https://img.shields.io/cocoapods/p/SwiftyStylable.svg?style=flat)](https://cocoapods.org/pods/SwiftyStylable)

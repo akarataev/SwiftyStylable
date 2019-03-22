@@ -3,26 +3,33 @@ import SwiftyStylable
 
 class Tests: XCTestCase {
     
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    func testStyleApplying() {
+        
+        // MARK: - given
+        
+        let view = UIView()
+        let color = UIColor.green
+        
+        
+        // MARK: - when
+        
+        view.apply(.viewStyle(color: color))
+        let result = (view.backgroundColor == color)
+        
+        
+        // MARK: - then
+        
+        XCTAssert(result , "View style doesn't applying")
     }
     
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
+}
+
+
+// MARK: - implement style for UIView
+
+extension SwiftyStyle where Control == UIView {
     
-    func testExample() {
-        // This is an example of a functional test case.
-        XCTAssert(true, "Pass")
+    static func viewStyle(color: UIColor) -> SwiftyStyle {
+        return .style { view in view.backgroundColor = color }
     }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure() {
-            // Put the code you want to measure the time of here.
-        }
-    }
-    
 }
